@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_animation_sample/tween_sample.dart';
 
 void main() => runApp(MyApp());
 
@@ -91,9 +92,17 @@ class _MyHomePageState extends State<MyHomePage> {
           // horizontal).
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            Text(
-              'You have pushed the button this many times:',
+            new InkWell(
+              child: Text(
+                'You have pushed the button this many times:',
+              ),
+              onTap: (){
+                Navigator.push(context, PageRouteBuilder(pageBuilder: (BuildContext context, Animation<double> animation, Animation<double> secondaryAnimation){
+                  return TweenSampleHome();
+                }));
+              },
             ),
+
             Text(
               '$_counter',
               style: Theme.of(context).textTheme.display1,
