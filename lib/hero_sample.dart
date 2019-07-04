@@ -5,6 +5,7 @@ import 'package:flutter/widgets.dart';
 
 import 'hero_widget.dart';
 
+/// 三个页面转换
 class HeroSample extends StatelessWidget {
   @override
   Widget build(BuildContext context) {

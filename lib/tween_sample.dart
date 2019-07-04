@@ -2,6 +2,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
+/// 1. Controller （控制）
+/// 2. Curve （过程）
+/// 3. Tween (结果)
 class TweenSampleHome extends StatelessWidget{
 
   @override
