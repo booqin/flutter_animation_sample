@@ -1,6 +1,9 @@
+import 'package:flare_flutter/flare_actor.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_animation_sample/tween_sample.dart';
+import 'package:nima/nima_actor.dart';
 
+import 'flare_sample.dart';
 import 'hero_radial_sample.dart';
 import 'hero_sample.dart';
 
@@ -69,6 +72,8 @@ class _MyHomePageState extends State<MyHomePage> {
     // The Flutter framework has been optimized to make rerunning build methods
     // fast, so that you can just rebuild anything that needs updating rather
     // than having to individually change instances of widgets.
+
+
     return Scaffold(
       appBar: AppBar(
         // Here we take the value from the MyHomePage object that was created by
@@ -100,10 +105,11 @@ class _MyHomePageState extends State<MyHomePage> {
                 'You have pushed the button this many times:',
               ),
               onTap: (){
-                Navigator.push(context, PageRouteBuilder(pageBuilder: (BuildContext context, Animation<double> animation, Animation<double> secondaryAnimation){
-//                  return HeroSample();
-                    return HeroRadialHome();
-                }));
+                Navigator.push(context, MaterialPageRoute(
+                  builder: (context){
+                    return FlareMainWidget();
+                  }
+                ));
               },
             ),
 
@@ -122,3 +128,29 @@ class _MyHomePageState extends State<MyHomePage> {
     );
   }
 }
+
+class FlareWidget extends StatefulWidget {
+  FlareWidget({Key key, this.title}) : super(key: key);
+
+  final String title;
+
+  @override
+  _FlareMainState createState() => new _FlareMainState();
+}
+
+class _FlareMainState extends State<FlareWidget> {
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+        appBar: new AppBar(
+          title: new Text("1111"),
+        ),
+        body: new FlareActor("assets/Filip.flr", alignment: Alignment.center,
+    fit: BoxFit.contain,
+    animation: "idle",
+        )
+    );
+  }
+}
+

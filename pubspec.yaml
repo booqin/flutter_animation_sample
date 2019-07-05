@@ -19,6 +19,8 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  nima: ^1.0.3
+  flare_flutter: ^1.5.0
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
@@ -73,3 +75,9 @@ flutter:
 
   assets:
     - assets/
+    - assets/Low Poly Wolf.nima
+    - assets/Low Poly Wolf0.png
+    - assets/Low Poly Wolf1.png
+    - assets/Filip.flr
+    - assets/Animals.flr
+    - assets/Bob (Minion).flr
